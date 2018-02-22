@@ -6,7 +6,7 @@
 	<groupId>com.doj</groupId>
 	<artifactId>com.doj.discovery</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>discovery-microservice-server</name>
 	<description>It is microservice discovery server using Spring Boot</description>
@@ -37,6 +37,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<exclusion>
+				  <groupId>org.springframework.boot</groupId>
+				  <artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			      </exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
